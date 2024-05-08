@@ -95,7 +95,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6291603508083938428}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1.5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ccfcf2a49f10bb4eade3db7fe318934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointValue: 2
 --- !u!114 &5965214794151958108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,3 +160,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ccfcf2a49f10bb4eade3db7fe318934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointValue: 0

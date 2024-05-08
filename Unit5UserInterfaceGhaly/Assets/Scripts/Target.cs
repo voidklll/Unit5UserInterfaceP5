@@ -11,6 +11,8 @@ public class Target : MonoBehaviour
     private float maxTorque = 10;
     private float xrange = 4;
     private float ySpawnPos = -6;
+    private GameManager gameManager;
+    public int pointValue;
 
 
     // Start is called before the first frame update
@@ -20,6 +22,7 @@ public class Target : MonoBehaviour
         targetRb.AddForce(RandomForce(), ForceMode.Impulse);
         targetRb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(),ForceMode.Impulse);
         transform.position = RandomSpawnpos();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -31,6 +34,7 @@ public class Target : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        gameManager.UpdateScore(pointValue);
     }
 
     private void OnTriggerEnter(Collider other)
